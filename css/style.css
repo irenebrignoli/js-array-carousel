@@ -52,6 +52,10 @@
   line-height: 25px;
 }
 
+.nav-btn.hide{
+  display: none;
+}
+
 #prev-up{
   top: 20px;
 }

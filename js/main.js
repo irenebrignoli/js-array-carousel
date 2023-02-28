@@ -40,13 +40,19 @@ nextDom.addEventListener('click',
 
   function(){
 
-    if (imageOn < imgsBoxDom.length -1 ){
+    if (imageOn < imgsBoxDom.length - 1 ){ //se il valore di imagOn è minore della lunghezza totale raggiunta
 
-      imgsBoxDom [imageOn].classList.remove('show');
+      imgsBoxDom [imageOn].classList.remove('show'); //nascondi img
       
       imageOn++;
 
-      imgsBoxDom [imageOn].classList.add('show');
+      imgsBoxDom [imageOn].classList.add('show'); //mostra prossima img
+
+      prevDom.classList.remove('hide'); //mostra pulsante per tornare indietro
+
+      if (imageOn == imgsBoxDom.length - 1){ //se il valore di imagOn è uguale alla lunghezza totale della lista 
+        nextDom.classList.add('hide'); //nascondi pulsante next
+      }
 
     }
 
@@ -65,6 +71,12 @@ prevDom.addEventListener('click',
       imageOn--;
 
       imgsBoxDom [imageOn].classList.add('show');
+
+      nextDom.classList.remove('hide');
+
+      if (imageOn == 0){
+        prevDom.classList.add('hide');
+      }
     }
   }
 
