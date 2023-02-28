@@ -63,3 +63,22 @@
 #next-down{
   bottom: 20px;
 }
+
+.circle-container{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 20px;
+}
+
+.circle{
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 20px 0;
+}
+
+.circle-current{
+  background-color: #fff;
+}
