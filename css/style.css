@@ -23,6 +23,11 @@
 
 .img-box{
   height: 100%;
+  display: none;
+}
+
+.img-box.show{
+  display: block;
 }
 
 .image{
